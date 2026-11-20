@@ -1,11 +1,8 @@
-# GPT-5.6-luna Campaign Summary
+# Incomplete Formalization Summary
 
 ## Configuration
 
-- Model: `gpt-5.6-luna`
-- Reasoning effort: `xhigh`
-- Provider: Codex
-- Workflow: LeanFlow autonomous proving and research campaign
+- Approach: assisted proving and research campaign
 - Budget: 5m tokens per problem
 - Source restriction: the previously completed IMO 2026 solution archive was
   excluded from the model's task-specific research inputs
@@ -52,13 +49,13 @@ eventual affine-period relation. Three declarations remain open:
 
 The graph at shutdown reported 183 proved nodes and an empty dependency
 frontier for the active helper. Repeated attempts changed wrappers and helper
-names without discharging the same reverse-boundary obligation. LeanFlow
+names without discharging the same reverse-boundary obligation. The workflow
 therefore preserved the source and state, then the campaign was stopped by the
 operator.
 
 ## Interpretation
 
-The run demonstrates both capability and a failure mode. GPT-5.6-luna solved
+The run demonstrates both capability and a failure mode. The retained attempt solved
 three substantial formalizations and produced considerable valid mathematics
 on the remaining three. On P6, however, the workflow did not sufficiently
 constrain new helper admission to a live dependency path. The resulting source

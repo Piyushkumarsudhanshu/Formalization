@@ -1,8 +1,7 @@
-# IMO 2026 — GPT-5.6-luna with LeanFlow
+# IMO 2026 — Stopped Formalization Archive
 
-This directory preserves the exact Lean source state from an experimental
-LeanFlow campaign using `gpt-5.6-luna` at `xhigh` reasoning effort through the
-Codex provider. The campaign was stopped on 11 August 2026 after the Problem 6
+This directory preserves the exact Lean source state from an incomplete
+formalization effort that was stopped on 11 August 2026 after the Problem 6
 search ceased producing a connected path toward the target.
 
 ## Status
@@ -44,9 +43,9 @@ efficient use of the model.
 
 ## Workflow evidence
 
-The [`run-evidence`](run-evidence) directory contains a curated campaign
-summary and engineering lessons. The complete raw LeanFlow state, logs,
-checkpoints, provider transcripts, and caches remain outside this repository;
+The [`run-evidence`](run-evidence) directory contains a curated project
+summary and engineering lessons. The complete raw workflow state, logs,
+checkpoints, transcripts, and caches remain outside this repository;
 they are substantially larger and may include machine-local operational data.
 
 `SHA256SUMS` records the exact ten retained Lean modules.
@@ -60,9 +59,9 @@ contributed the accepted Problem 1 correction in
 [`jsm28/IMOLean#1`](https://github.com/jsm28/IMOLean/pull/1). Original source
 headers and the project license are preserved.
 
-The run used LeanFlow's normal research capabilities, including Lean and
-mathlib search, public repositories, papers, and general web research. It is a
-research-assisted formalization attempt, not an independent-solution claim.
+The work used Lean and mathlib search, public repositories, papers, and general
+web research. It is a documented formalization attempt, not an
+independent-solution claim.
 
 ## Inspect
 

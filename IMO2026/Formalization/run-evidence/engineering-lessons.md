@@ -53,7 +53,7 @@ become unbounded repetition.
 - LeanProbe and prepared-file caching should remain the primary edit-time
   checker. Context compression must not discard a warm incremental session for
   unchanged source.
-- Provider transport timeouts must match the allowance shown by managed
+- Transport timeouts must match the allowance shown by managed
   heartbeats; otherwise a long synthesis can be discarded halfway through its
   advertised window.
 - Timing reports should separate resource admission, incremental preparation,
@@ -63,7 +63,7 @@ become unbounded repetition.
 
 ## Merge boundary
 
-The LeanFlow changes developed during the campaign focus on deterministic
+The workflow changes developed during the campaign focus on deterministic
 verification, source rollback, incremental checks, timeout-aware refactoring,
 advisor admission, durable retry guards, canonical target routing, and clearer
 transition visibility. More ambitious semantic theorem-subsumption and fully

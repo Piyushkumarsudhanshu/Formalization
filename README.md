@@ -26,7 +26,7 @@ All completed projects are maintained on the `main` branch and are intended to m
 
 ### 1. IMO 2026 — Problems 1–6
 
-**Directory:** `IMO2026/GPT5.6`
+**Directory:** `IMO2026/Solution`
 
 **Area:** Mathematical Olympiad, Number Theory, Algebra, Geometry, and Combinatorics.
 
@@ -42,7 +42,7 @@ The project focuses on translating olympiad-level mathematical arguments into fo
 
 ### 2. IMO-LeanProofBench — 18 Problems
 
-**Directory:** `LeanIMOBench/GPT6-astra`
+**Directory:** `LeanIMOBench/Solution`
 
 **Area:** Geometry and Combinatorics.
 
@@ -58,7 +58,7 @@ A collection of eighteen formalized benchmark problems:
 
 Every formalized statement is byte-identical to its published benchmark counterpart.
 
-Proof dependency graphs are documented in `LeanIMOBench/GPT6-astra/DAGS.md`.
+Proof dependency graphs are documented in the project evidence and source files.
 
 **Lake Target:** `LeanIMOBench`
 
@@ -143,7 +143,6 @@ These projects contain remaining proof obligations and are not represented as co
 | Lean 4     | Formal theorem proving             |
 | Mathlib    | Mathematical library               |
 | Lake       | Project management and compilation |
-| LeanFlow   | Formalization workflow             |
 
 ---
 
@@ -174,7 +173,7 @@ lake build Pyth
 cd ../CramerWoldTheorem
 lake build CramerWoldTheorem
 
-cd ../IMO2026/GPT5.6
+cd ../IMO2026/Solution
 lake build IMO2026
 ```
 
@@ -185,9 +184,9 @@ lake build IMO2026
 ```text
 .
 ├── IMO2026/
-│   └── GPT5.6/
+│   └── Solution/
 ├── LeanIMOBench/
-│   └── GPT6-astra/
+│   └── Solution/
 ├── PythagoreanPolynomialParametrization/
 ├── CramerWoldTheorem/
 ├── scripts/

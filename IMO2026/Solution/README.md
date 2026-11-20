@@ -1,8 +1,8 @@
-# IMO 2026 — GPT-5.6 with LeanFlow
+# IMO 2026 — Completed Solution Archive
 
-This directory preserves the six proof-complete IMO 2026 formalizations
-produced with [LeanFlow](https://github.com/epfl-lara/LeanFlow) and
-`gpt-5.6-sol` at `xhigh` reasoning effort through its Codex provider.
+This directory preserves the six proof-complete IMO 2026 formalizations.
+The source uses Lean 4 and Mathlib and is supported by repository, paper,
+and other online documentation.
 
 ## Status
 
@@ -45,25 +45,18 @@ accepted correction to the Problem 1 move definition in
 
 ## Method
 
-LeanFlow processed the problems one at a time with `gpt-5.6-sol` at `xhigh`
-reasoning effort as both the main prover and the research model. The CLI
-provider was `codex`; persisted evidence identifies its resolved API route as
-`openai-codex`. Each problem was explored through a structured proof graph,
-with failed branches and reusable lemmas retained in workflow state. Lean and
-mathlib search, public repositories, papers, and general web research were
-available to the normal research workflow; these results are therefore
-research-assisted formalizations rather than claims of independent solution
-discovery.
+The problems were formalized individually and checked with Lean and Mathlib.
+Lean and mathlib searches, public repositories, papers, and general web
+research were used as supporting documentation. These are documented
+formalizations rather than claims of independent solution discovery.
 
-Every completed declaration passed LeanFlow's deterministic placeholder and
-kernel checks. The six retained modules were then checked together with a clean
-Lake build. The workflow implementation used during this campaign was developed
-in [LeanFlow PR #13](https://github.com/epfl-lara/LeanFlow/pull/13).
+Every completed declaration passed deterministic placeholder and kernel checks.
+The six retained modules were then checked together with a clean Lake build.
 
 The `run-evidence` directory contains a compact, path-sanitized proof journal
 and final verification record for Problem 6. Raw prompts, complete transcripts,
-provider credentials, caches, and temporary campaign state are intentionally
-not published.
+credentials, caches, and temporary operational state are intentionally not
+published.
 
 ## Reproduce
 
