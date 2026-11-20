@@ -1,92 +1,187 @@
 # Paper-Level Autoformalizations
 
-Lean 4 formalization projects produced with the
-[LeanFlow](https://github.com/epfl-lara/LeanFlow) workflow. The `main`
-branch is reserved for projects that are ready to present publicly: each listed
-project builds and has no project-local `sorry`, `admit`, custom `axiom`, or
-`unsafe` in its Lean files.
+**Research-oriented mathematical formalization using Lean 4, Mathlib, and AI-assisted proof engineering.**
 
-Work-in-progress formalizations are kept on separate draft pull requests instead
-of living on `main`.
+This repository contains machine-verified Lean 4 formalizations of mathematical research papers, International Mathematical Olympiad problems, and mathematical reasoning benchmarks.
 
-## Repository Metadata
+The projects follow the [LeanFlow](https://github.com/epfl-lara/LeanFlow) workflow, combining AI-assisted proof development with formal verification by the Lean theorem prover.
 
-- License: [Apache License 2.0](LICENSE)
-- Contribution guide: [CONTRIBUTING.md](CONTRIBUTING.md)
-- Publication notes and limitations:
-  [PUBLICATION_LIMITATIONS.md](PUBLICATION_LIMITATIONS.md)
-- Citation metadata: [CITATION.cff](CITATION.cff)
+The objective is to bridge the gap between informal mathematical reasoning and machine-checkable proofs.
+
+---
+
+## Research Highlights
+
+- **6 IMO problems:** Formalizations of all six official IMO 2026 problems.
+- **18 benchmark problems:** Formalizations covering Geometry and Combinatorics from IMO-LeanProofBench.
+- **Research-paper formalizations:** Results from probability theory, mathematical statistics, number theory, and polynomial parametrization.
+- **Proof verification:** Completed projects are built and checked as Lean 4 projects.
+- **Reproducibility:** Each project includes its own source code, build instructions, and relevant provenance information.
+
+## Repository Standards
+
+The `main` branch is reserved for projects considered ready for public presentation.
+
+Every completed project is expected to satisfy the following standards:
+
+- Builds successfully using its specified Lake target.
+- Contains no project-local `sorry` or `admit`.
+- Introduces no custom `axiom`.
+- Contains no `unsafe` declarations in its Lean files.
+- Includes relevant source attribution and project documentation.
+
+Work in progress is maintained separately through draft pull requests.
+
+---
 
 ## Completed Projects
 
-### `IMO2026/GPT5.6`
+### 1. IMO 2026 — Problems 1–6
 
-- Lake target: `IMO2026`
-- Source: Joseph Myers,
-  [`jsm28/IMOLean`](https://github.com/jsm28/IMOLean), based on the
-  [official IMO 2026 problems](https://www.imo-official.org/problems.aspx)
-- Status: proof-complete LeanFlow formalizations of Problems 1–6, produced with
-  `gpt-5.6-sol` at `xhigh` reasoning effort through the Codex provider and
-  verified together as one Lean project.
-- Provenance and compact run evidence:
-  [`IMO2026/GPT5.6/README.md`](IMO2026/GPT5.6/README.md)
+**Directory:** `IMO2026/GPT5.6`
 
-### `LeanIMOBench/GPT6-astra`
+**Mathematical Area:** Number Theory, Algebra, Combinatorics, and Geometry.
 
-- Lake target: `LeanIMOBench`
-- Source: IMO-LeanProofBench, the Lean half of IMO-Bench (Luong et al.,
-  *Towards Robust Mathematical Reasoning*), published as
-  `imobench/lean_proof_bench_v2.csv` in
-  [`google-deepmind/superhuman`](https://github.com/google-deepmind/superhuman)
-- Status: proof-complete formalizations of the eighteen benchmark problems that
-  LEAP ([arXiv:2606.03303](https://arxiv.org/abs/2606.03303)) does not publish
-  solutions for — twelve Geometry and six Combinatorics, twelve of them problems
-  composed for the benchmark and never published. Produced with LeanFlow with
-  `gpt-6-astra` (`xhigh` reasoning orchestrator, `low` reasoning prover) through
-  the Codex provider, and verified together as one Lean project. Every statement
-  is byte-identical to the published benchmark. Proof graphs are in
-  `LeanIMOBench/GPT6-astra/DAGS.md`.
+**Source:** [Official IMO 2026 Problems](https://www.imo-official.org/problems.aspx)
 
-### `PythagoreanPolynomialParametrization`
+**Description:**
 
-- Lake target: `Pyth`
-- Source: Sophie Frisch and Leonid Vaserstein,
-  [*Parametrization of Pythagorean triples by a single triple of
-  polynomials*](https://arxiv.org/abs/0706.0290)
-- Status: proof-complete source-backed formalization of the obstruction theorem,
-  the integer-valued parametrization, and the positive/16-parameter variants.
+A complete Lean 4 formalization of all six problems from the 2026 International Mathematical Olympiad.
 
-### `CramerWoldTheorem`
+**Implementation Details:**
 
-- Lake target: `CramerWoldTheorem`
-- Source: Russell Lyons and Kevin Zumbrun,
-  [*A Calculus Proof of the Cramer-Wold
-  Theorem*](https://arxiv.org/abs/1607.03206)
-- Status: proof-complete source-backed formalization of the half-space theorem,
-  average-distance reconstruction, odd-dimensional inversion, and even-to-odd
-  reduction.
+- Based on Joseph Myers' [IMOLean](https://github.com/jsm28/IMOLean) project.
+- Developed using GPT-5.6 with high reasoning effort.
+- Uses the LeanFlow workflow.
+- All six formalizations are verified together as one Lean project.
+
+**Lake Target:** `IMO2026`
+
+---
+
+### 2. IMO-LeanProofBench — 18 Benchmark Problems
+
+**Directory:** `LeanIMOBench/GPT6-astra`
+
+**Mathematical Area:** Geometry and Combinatorics.
+
+**Source:** [Google DeepMind Superhuman Benchmark](https://github.com/google-deepmind/superhuman)
+
+**Research Reference:** [LEAP — arXiv:2606.03303](https://arxiv.org/abs/2606.03303)
+
+**Description:**
+
+A collection of 18 machine-verified formalizations addressing benchmark problems for which LEAP does not publish solutions.
+
+The collection includes:
+
+- 12 Geometry problems.
+- 6 Combinatorics problems.
+- 12 problems originally composed for the benchmark and not previously published.
+
+**Implementation Details:**
+
+- Developed using GPT-6 Astra through the Codex provider.
+- Uses an AI-assisted LeanFlow orchestration workflow.
+- Every formalized statement is byte-identical to its published benchmark counterpart.
+- Proof dependency graphs are documented in `DAGS.md`.
+- All 18 problems are verified together as one Lean project.
+
+**Lake Target:** `LeanIMOBench`
+
+---
+
+### 3. Pythagorean Polynomial Parametrization
+
+**Directory:** `PythagoreanPolynomialParametrization`
+
+**Mathematical Area:** Number Theory and Algebra.
+
+**Research Paper:** [Parametrization of Pythagorean triples by a single triple of polynomials](https://arxiv.org/abs/0706.0290)
+
+**Authors:** Sophie Frisch and Leonid Vaserstein.
+
+**Description:**
+
+A source-backed formalization of mathematical results concerning polynomial parametrizations of Pythagorean triples.
+
+**Formalized Results:**
+
+- The obstruction theorem.
+- Integer-valued parametrization.
+- Positive parametrization variants.
+- 16-parameter variants.
+
+**Lake Target:** `Pyth`
+
+---
+
+### 4. Cramer–Wold Theorem
+
+**Directory:** `CramerWoldTheorem`
+
+**Mathematical Area:** Probability Theory and Mathematical Statistics.
+
+**Research Paper:** [A Calculus Proof of the Cramer-Wold Theorem](https://arxiv.org/abs/1607.03206)
+
+**Authors:** Russell Lyons and Kevin Zumbrun.
+
+**Description:**
+
+A formalization of mathematical results surrounding the Cramer–Wold theorem, which establishes that a probability distribution on a finite-dimensional Euclidean space is uniquely determined by its one-dimensional projections.
+
+**Formalized Results:**
+
+- Half-space theorem.
+- Average-distance reconstruction.
+- Odd-dimensional inversion.
+- Even-to-odd dimensional reduction.
+
+**Lake Target:** `CramerWoldTheorem`
+
+---
 
 ## Work in Progress
 
-The unfinished formalizations are maintained as draft PR branches:
+The following formalizations are maintained in separate draft pull requests.
 
-- `AShortProofOfTheHiltonMilnerTheorem`:
-  [*A short proof of the Hilton-Milner
-  Theorem*](https://arxiv.org/abs/2411.02513), with remaining proof
-  obligations.
-- `QuantizingPythagoreanTriples`:
-  [*Quantizing Pythagorean triples*](https://arxiv.org/abs/2602.20536), with
-  remaining proof obligations and the source-stated open unimodality conjecture.
+| Project                                    | Research Area          |
+| ------------------------------------------ | ---------------------- |
+| A Short Proof of the Hilton–Milner Theorem | Extremal Combinatorics |
+| Quantizing Pythagorean Triples             | Number Theory          |
 
-## Checks
+These projects contain remaining proof obligations and are not presented as completed formalizations.
 
-Run all completed project builds:
+---
+
+## Technology Stack
+
+| Technology | Purpose                                        |
+| ---------- | ---------------------------------------------- |
+| Lean 4     | Formal theorem proving                         |
+| Mathlib    | Mathematical definitions and theorem libraries |
+| LeanFlow   | Formalization workflow                         |
+| GPT models | AI-assisted proof development                  |
+| Lake       | Lean project and dependency management         |
+| Codex      | AI-assisted development environment            |
+
+---
+
+## Building the Projects
+
+### Requirements
+
+- Lean 4 toolchain specified by each project.
+- Lake.
+- Required Mathlib dependencies.
+
+### Build All Completed Projects
 
 ```bash
 ./scripts/check-projects.sh
 ```
 
-Or build an individual project from its directory:
+### Build Individual Projects
 
 ```bash
 cd PythagoreanPolynomialParametrization
@@ -98,3 +193,49 @@ lake build CramerWoldTheorem
 cd ../IMO2026/GPT5.6
 lake build IMO2026
 ```
+
+The LeanIMOBench project can also be built using its `LeanIMOBench` Lake target.
+
+---
+
+## Repository Structure
+
+```text
+.
+├── IMO2026/
+│   └── GPT5.6/
+├── LeanIMOBench/
+│   └── GPT6-astra/
+├── PythagoreanPolynomialParametrization/
+├── CramerWoldTheorem/
+├── scripts/
+│   └── check-projects.sh
+├── CONTRIBUTING.md
+├── PUBLICATION_LIMITATIONS.md
+├── CITATION.cff
+└── README.md
+```
+
+---
+
+## Research Philosophy
+
+Mathematical reasoning is traditionally expressed in natural language, where hidden assumptions, omitted steps, and ambiguities can be difficult to detect.
+
+Formal verification provides a way to express mathematical arguments precisely and check their correctness mechanically.
+
+This repository explores how modern AI systems can assist in translating mathematical research into formal proofs while retaining Lean 4 as the verification authority.
+
+**The central principle is simple: AI can assist in constructing a proof, but the Lean kernel must verify it.**
+
+---
+
+## License
+
+This repository is distributed under the [Apache License 2.0](LICENSE).
+
+For contribution guidelines, see [CONTRIBUTING.md](CONTRIBUTING.md).
+
+For publication notes and limitations, see [PUBLICATION_LIMITATIONS.md](PUBLICATION_LIMITATIONS.md).
+
+For citation information, see [CITATION.cff](CITATION.cff).
