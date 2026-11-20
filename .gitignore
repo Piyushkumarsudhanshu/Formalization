@@ -1,0 +1,24 @@
+/.lake
+/.leanflow
+/.epflemma
+/.artifacts
+
+# Nested LeanFlow artifacts and legacy cache directories
+**/.lake
+**/.leanflow
+**/.epflemma
+**/.artifacts
+**/logs
+
+# LaTeX build artifacts
+*.aux
+*.bbl
+*.bcf
+*.blg
+*.fdb_latexmk
+*.fls
+*.log
+*.out
+*.run.xml
+*.synctex.gz
+*.toc
